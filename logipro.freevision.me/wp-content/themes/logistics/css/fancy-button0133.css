@@ -1,0 +1,386 @@
+/**
+* Custom Fancy Button
+*
+* Based On: http://codepen.io/kjbrum/pen/wBBLXx
+*/
+.ozy-custom_button:before,
+.ozy-custom_button:after,
+.ozy-custom_button span:before,
+.ozy-custom_button span:after  {
+	box-sizing: border-box;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+.ozy-custom_button_w {margin:0 10px 0 0;}
+.ozy-custom_button span {
+	-webkit-transition: none;
+	transition: none;
+	z-index:1;
+}
+.ozy-custom_button:before,
+.ozy-custom_button:after,
+.ozy-custom_button span:before,
+.ozy-custom_button span:after {z-index: -1;}
+.ozy-custom_button {
+	text-decoration: none;
+	text-align:center;
+	text-decoration:none !important;
+	z-index:1;
+}
+.ozy-custom_button {
+	position: relative;
+	display: inline-block;
+	margin: 1rem auto;
+	padding:14px 40px;
+	text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 300;
+	letter-spacing:3px;
+	overflow: hidden;
+	border: 2px solid currentColor;
+	border-radius:3px;
+}
+
+.ocbtn-0:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height:100%;
+}
+.ocbtn-0:hover:before {width:100%;}
+.ocbtn-1:after {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.ocbtn-1:hover:after {border-width: 350px 550px 0 0;}
+.ocbtn-1-2:before {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ocbtn-1-2:after {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.ocbtn-1-2:hover:before {border-width: 206.25px 0 0 206.25px;}
+.ocbtn-1-2:hover:after {border-width: 0 0 206.25px 206.25px;}
+
+.ocbtn-2:before {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ocbtn-2:after {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.ocbtn-2:hover:before {border-width: 165px 0 0 165px;}
+.ocbtn-2:hover:after {border-width: 0 165px 165px 0;}
+
+.ocbtn-33:before {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ocbtn-33:after {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.ocbtn-33 span:before {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.ocbtn-33 span:after {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.ocbtn-33:hover:before {border-width: 165px 0 0 165px;}
+.ocbtn-33:hover:after {border-width: 0 165px 165px 0;}
+.ocbtn-33:hover span:before {border-width: 0 0 165px 165px;}
+.ocbtn-33:hover span:after {border-width: 165px 165px 0 0;}
+.ocbtn-4:after {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.ocbtn-4:before {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ocbtn-4 span:after {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.ocbtn-4 span:before {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.ocbtn-4:hover:before {border-width: 20px 62.5px;}
+.ocbtn-4:hover:after {border-width: 20px 62.5px;}
+.ocbtn-4:hover span:before {border-width: 20px 62.5px;}
+.ocbtn-4:hover span:after {border-width: 20px 62.5px;}
+.ocbtn-5:after {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.ocbtn-5:before {
+	content: '';
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(360deg);
+	border-style: solid;
+	border-width: 0 0 0 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ocbtn-5:hover:before, .ocbtn-5:hover:after {border-width: 40px 262.5px;}
+.ocbtn-6 span {
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	-webkit-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);
+	-webkit-transition: width 0.4s, height 0.4s;
+	transition: width 0.4s, height 0.4s;
+	z-index: -1;
+}
+.ocbtn-6:hover span {
+	width: 562.5px;
+	height: 562.5px;
+}
+
+.ocbtn-7:before, .ocbtn-7:after,
+.ocbtn-7 span:before,
+.ocbtn-7 span:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	width:25%;
+	height: 0;
+}
+.ocbtn-7:before {left: 0;}
+.ocbtn-7:after {left:50%;}
+.ocbtn-7 span:before, .ocbtn-7 span:after {
+	top: auto;
+	bottom: 0;
+}
+.ocbtn-7 span:before {left:25%;}
+.ocbtn-7 span:after {left:75%;}
+.ocbtn-7:hover:before, .ocbtn-7:hover:after,
+.ocbtn-7:hover span:before,
+.ocbtn-7:hover span:after {height:100%;}
+.ocbtn-8:before, .ocbtn-8:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 0;
+}
+.ocbtn-8:after {
+	top: auto;
+	bottom: 0;
+}
+.ocbtn-8:hover:before, .ocbtn-8:hover:after {height:50%;}
+.ocbtn-9:before, .ocbtn-9:after,
+.ocbtn-9 span:before,
+.ocbtn-9 span:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 0;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+.ocbtn-9:after,
+.ocbtn-9 span:before {
+	top: auto;
+	bottom: 0;
+}
+.ocbtn-9 span:before,
+.ocbtn-9 span:after {
+	-webkit-transition-delay: 0.4s;
+		  transition-delay: 0.4s;
+}
+.ocbtn-9:hover:before, .ocbtn-9:hover:after,
+.ocbtn-9:hover span:before,
+.ocbtn-9:hover span:after {
+	height:100%;
+}
+
+.ocbtn-10:before, .ocbtn-10:after,
+.ocbtn-10 span:before,
+.ocbtn-10 span:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height:100%;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+.ocbtn-10:after,
+.ocbtn-10 span:before {
+	left: auto;
+	right: 0;
+}
+.ocbtn-10 span:before,
+.ocbtn-10 span:after {
+	-webkit-transition-delay: 0.4s;
+		  transition-delay: 0.4s;
+}
+.ocbtn-10:hover:before, .ocbtn-10:hover:after,
+.ocbtn-10:hover span:before,
+.ocbtn-10:hover span:after {
+	width:100%;
+}
+
+@-webkit-keyframes criss-cross-left {
+	0% {left: -20px;}
+	50% {left: 50%;width: 20px;height: 20px;}
+	100% {left: 50%;width: 375px;height: 375px;}
+}
+@keyframes criss-cross-left {
+	0% {left: -20px;}
+	50% {left: 50%;width: 20px;height: 20px;}
+	100% {left: 50%;width: 375px;height: 375px;}
+}
+@-webkit-keyframes criss-cross-right {
+	0% {right: -20px;}
+	50% {right: 50%;width: 20px;height: 20px;}
+	100% {right: 50%;width: 375px;height: 375px;}
+}
+@keyframes criss-cross-right {
+	0% {right: -20px;}
+	50% {right: 50%;width: 20px;height: 20px;}
+	100% {right: 50%;width: 375px;height: 375px;}
+}
+.ocbtn-11 {position: relative;}
+.ocbtn-11:before, .ocbtn-11:after {
+	position: absolute;
+	top: 50%;
+	content: '';
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+.ocbtn-11:before {
+	left: -20px;
+	-webkit-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);
+}
+.ocbtn-11:after {
+	right: -20px;
+	-webkit-transform: translate(50%, -50%);
+		  transform: translate(50%, -50%);
+}
+.ocbtn-11:hover:before {
+	-webkit-animation: criss-cross-left 0.8s both;
+		  animation: criss-cross-left 0.8s both;
+}
+.ocbtn-11:hover:after {
+	-webkit-animation: criss-cross-right 0.8s both;
+		  animation: criss-cross-right 0.8s both;
+}

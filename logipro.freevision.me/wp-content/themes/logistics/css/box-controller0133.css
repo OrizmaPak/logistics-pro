@@ -1,0 +1,45 @@
+.ozy-cta-hover-box {
+	position:relative;
+	/*border:1px solid #dedede;*/
+	background-size: cover;	
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.ozy-cta-hover-box>a {
+	position:absolute;
+	display:inline-block;
+	width:100%;
+	height:100%;
+	padding:30px;
+	text-decoration:none;
+}
+.ozy-cta-hover-box.half_box {
+	border:none;
+	box-shadow:none !important;	
+}
+.ozy-cta-hover-box.half_box>a {
+	background-color:rgba(255, 255, 255, .5);
+	width:50%;
+}
+.ozy-cta-hover-box.box-right.half_box>a {
+	right:0;
+}
+.ozy-cta-hover-box>a>i.box-icon {
+	position:absolute;
+	bottom:30px;
+	right:30px;
+    font-size: 24px;
+    line-height: 24px;	
+}
+.ozy-cta-hover-box>a p {
+	padding:0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+	.ozy-cta-hover-box.half_box>a {
+		width:100%;
+	}
+}

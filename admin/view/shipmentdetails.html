@@ -1,0 +1,220 @@
+<section class="animate__animated animate__fadeIn relative">
+  <p class="page-title">
+    <span>shipment details</span>
+  </p>
+
+  <!-- File upload -->
+
+  <!-- here is the tab navigation -->
+  <ul
+    class="cark:border-gray-700 cark:text-gray-400 flex flex-wrap border-b border-gray-200 text-center text-sm font-medium text-gray-500"
+  >
+    <li
+      class="cp viewer optioner active me-2 !text-blue-600"
+      name="viewshipmentdetails"
+      onclick="runoptioner(this)"
+    >
+      <p
+        class="inline-block rounded-t-lg p-4 capitalize hover:bg-gray-50 hover:text-gray-600"
+      >
+        view shipment details
+      </p>
+    </li>
+    <li
+      id=""
+      class="cp updater optioner me-2"
+      name="shipmentdetailsform"
+      onclick="runoptioner(this)"
+    >
+      <p
+        class="inline-block rounded-t-lg p-4 capitalize hover:bg-gray-50 hover:text-gray-600"
+      >
+        Manage shipment details
+      </p>
+    </li>
+  </ul>
+
+  <form id="shipmentdetailsform" class="hidden">
+    <div class="flex flex-col space-y-3 rounded-sm bg-white/90 p-5 xl:p-10">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div class="form-group">
+          <label for="image1" class="control-label hidden">Image 1</label>
+          <div title="Click to update shipment image 1" class="cp relative">
+            <img
+              id="image1Frame1"
+              alt="Image 1 Preview"
+              class="h-[200px] w-[200px] rounded-full border-none shadow-xl shadow-[#CCE6FF]"
+              onclick="document.getElementById('image1').click()"
+              src="./images/defaultcompany.png"
+            />
+            <span
+              class="absolute bottom-0 right-[50px] cursor-pointer rounded-full bg-white p-1 shadow-xl"
+              onclick="document.getElementById('image1').click()"
+            >
+              <span class="material-symbols-outlined h-6 w-6 text-gray-500"
+                >edit</span
+              >
+            </span>
+          </div>
+          <input
+            type="file"
+            name="image1"
+            id="image1"
+            class="form-control hidden"
+            accept="image/*"
+            onchange="updateImage(event, 'image1Frame1')"
+          />
+        </div>
+      
+        <div class="form-group">
+          <label for="image2" class="control-label hidden">Image 2</label>
+          <div title="Click to update shipment image 2" class="cp relative">
+            <img
+              id="image2Frame2"
+              alt="Image 2 Preview"
+              class="h-[200px] w-[200px] rounded-full border-none shadow-xl shadow-[#CCE6FF]"
+              onclick="document.getElementById('image2').click()"
+              src="./images/defaultcompany.png"
+            />
+            <span
+              class="absolute bottom-0 right-[50px] cursor-pointer rounded-full bg-white p-1 shadow-xl"
+              onclick="document.getElementById('image2').click()"
+            >
+              <span class="material-symbols-outlined h-6 w-6 text-gray-500"
+                >edit</span
+              >
+            </span>
+          </div>
+          <input
+            type="file"
+            name="image2"
+            id="image2"
+            class="form-control hidden"
+            accept="image/*"
+            onchange="updateImage(event, 'image2Frame2')"
+          />
+        </div>
+    
+        <div class="form-group">
+          <label for="description" class="control-label">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            class="form-control comp"
+            placeholder="Enter Description"
+            rows="6"
+          ></textarea>
+        </div>
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div class="form-group">
+            <label for="quantity" class="control-label">Quantity</label>
+            <input
+              type="number"
+              name="quantity"
+              id="quantity"
+              class="form-control comp"
+              placeholder="Enter Quantity"
+            />
+          </div>
+          <div class="form-group">
+            <label for="weight" class="control-label">Weight</label>
+            <input
+              type="number"
+              step="0.01"
+              name="weight"
+              id="weight"
+              class="form-control comp"
+              placeholder="Enter Weight"
+            />
+          </div>
+          <div class="form-group">
+            <label for="dimensions" class="control-label">Dimensions</label>
+            <input
+              type="text"
+              name="dimensions"
+              id="dimensions"
+              class="form-control comp"
+              placeholder="Enter Dimensions"
+            />
+          </div>
+          <div class="form-group">
+            <label for="value" class="control-label">Value</label>
+            <input
+              type="number"
+              step="0.01"
+              name="value"
+              id="value"
+              class="form-control comp"
+              placeholder="Enter Value"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 col-span-2">
+          <div class="form-group">
+            <label for="currency" class="control-label">Currency</label>
+            <input
+              type="text"
+              name="currency"
+              id="currency"
+              class="form-control comp"
+              placeholder="Enter Currency"
+              value="USD"
+            />
+          </div>
+          <div></div>
+          <div class="mt-5 flex justify-end">
+            <button id="submit" type="button" class="btn">
+              <div class="btnloader" style="display: none"></div>
+              <span>Submit</span>
+            </button>
+          </div>
+        </div>
+    </div>
+    </div>
+  </form>
+
+  <div class="" id="viewshipmentdetails">
+    <form id="viewshipmentdetailsform" class="">
+      <div class="flex flex-col space-y-3 rounded-sm bg-blue-100 p-5 xl:p-10">
+          <div class="grid grid-cols-1 gap-6 lg:grid-cols-4">
+              <div class="form-group col-span-3">
+                  <label for="queryUser" class="control-label">Search</label>
+                  <input type="text" name="q" id="q" class="form-control comp bg-white" placeholder="Search by anything">
+              </div>
+              <div class="mt-5 flex justify-end">
+                  <button id="querySubmit" type="button" class="btn">
+                      <div class="btnloader" style="display: none;"></div>
+                      <span>Search</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </form>
+    <div class="table-content">
+      <table class="table-auto">
+        <thead>
+          <tr>
+            <th style="width: 10px">s/n</th>
+            <th>image</th>
+            <th>image</th>
+            <th>description</th>
+            <th>quantity</th>
+            <th>weight</th>
+            <th>dimensions</th>
+            <th>value</th>
+            <th>currency</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody id="tabledata">
+          <tr>
+            <td colspan="100%" class="text-center opacity-70">
+              Table is empty
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-status"></div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
 let qqqqqqqqqq = 0
-// let baseurl = 'https://skytrust-ruddy.vercel.app/node';
-let baseurl = 'http://localhost:5001/node';
+let baseurl = 'https://logipro-node.vercel.app/node';
+// let baseurl = 'http://localhost:5001/node';
 
 function runpermissioncheck(state=''){ 
     if(!state && qqqqqqqqqq ==0)return

@@ -47,7 +47,7 @@ window.onload = function() {
  async function submitHander() {
      if(!runLoginValidations()) return
  
-     let result = await httpRequest('https://logipro-node.vercel.app//node/api/v1/auth/login', getLoginFormParams(), document.querySelector('button#submit'))
+     let result = await httpRequest('https://logipro-node.vercel.app/node/api/v1/auth/login', getLoginFormParams(), document.querySelector('button#submit'))
      if(result.status) {
          notification('Login Successful', 1)
          sessionStorage.setItem('user', JSON.stringify(result.data.user))
